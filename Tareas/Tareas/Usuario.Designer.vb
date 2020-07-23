@@ -44,7 +44,14 @@ Partial Class Usuario
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.dtg = New System.Windows.Forms.DataGridView()
+        Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.btnModificar = New System.Windows.Forms.Button()
+        Me.txtBuscar = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
+        CType(Me.dtg, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnGuardar
@@ -277,18 +284,69 @@ Partial Class Usuario
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Usuario"
         '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.dtg)
+        Me.GroupBox2.Location = New System.Drawing.Point(313, 43)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(297, 273)
+        Me.GroupBox2.TabIndex = 12
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = " "
+        '
+        'dtg
+        '
+        Me.dtg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dtg.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dtg.Location = New System.Drawing.Point(3, 16)
+        Me.dtg.Name = "dtg"
+        Me.dtg.Size = New System.Drawing.Size(291, 254)
+        Me.dtg.TabIndex = 0
+        '
+        'btnEliminar
+        '
+        Me.btnEliminar.Location = New System.Drawing.Point(127, 330)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(56, 20)
+        Me.btnEliminar.TabIndex = 13
+        Me.btnEliminar.Text = " Eliminar"
+        Me.btnEliminar.UseVisualStyleBackColor = True
+        '
+        'btnModificar
+        '
+        Me.btnModificar.Location = New System.Drawing.Point(200, 330)
+        Me.btnModificar.Name = "btnModificar"
+        Me.btnModificar.Size = New System.Drawing.Size(65, 19)
+        Me.btnModificar.TabIndex = 14
+        Me.btnModificar.Text = " Modificar"
+        Me.btnModificar.UseVisualStyleBackColor = True
+        '
+        'txtBuscar
+        '
+        Me.txtBuscar.Location = New System.Drawing.Point(339, 330)
+        Me.txtBuscar.Name = "txtBuscar"
+        Me.txtBuscar.Size = New System.Drawing.Size(227, 20)
+        Me.txtBuscar.TabIndex = 15
+        '
         'Usuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(324, 393)
+        Me.ClientSize = New System.Drawing.Size(622, 393)
+        Me.Controls.Add(Me.txtBuscar)
+        Me.Controls.Add(Me.btnModificar)
+        Me.Controls.Add(Me.btnEliminar)
+        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Usuario"
         Me.Text = " Usuario"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        CType(Me.dtg, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -314,4 +372,9 @@ Partial Class Usuario
     Friend WithEvents Label3 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents dtg As DataGridView
+    Friend WithEvents btnEliminar As Button
+    Friend WithEvents btnModificar As Button
+    Friend WithEvents txtBuscar As TextBox
 End Class
